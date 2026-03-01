@@ -1,0 +1,10 @@
+ollama_host = "http://localhost:33821"
+chat_model = "qwen2.5:latest"
+embedding_model = "nomic-embed-text"
+data_path = "./data"
+theme = "MidnightCommander"
+debug_logging = false
+
+[privacy]
+store_evidence = true
+store_draft_text = true

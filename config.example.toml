@@ -1,0 +1,43 @@
+# Profiler Configuration Example
+# Copy this file to ~/.config/profiler/config.toml and customize
+
+# Ollama connection settings
+ollama_host = "http://localhost:11434"
+
+# LLM models to use
+# Recommended models:
+# - qwen2.5:7b (good balance of speed/quality)
+# - gemma2:9b (excellent quality)
+# - llama3.2:3b (fastest, lower quality)
+chat_model = "qwen2.5:7b"
+
+# Embedding model for semantic search
+# Recommended: nomic-embed-text or mxbai-embed-large
+embedding_model = "nomic-embed-text"
+
+# Data directory location (for profiles and logs)
+# Default: ~/.local/share/profiler
+data_path = "/home/user/.local/share/profiler"
+
+# UI Theme
+# Options: "Default", "Minimal", "Dark"
+theme = "Default"
+
+# Privacy settings
+[privacy]
+# Store evidence snippets from analyzed text
+store_evidence = true
+
+# Store full draft text in analysis history
+store_draft_text = true
+
+# Enable debug logging
+debug_logging = false
+
+# Firefox profile directory for authenticated URL scraping
+# When importing from LinkedIn, Facebook, or Twitter, the scraper reads
+# cookies from your Firefox profile to access authenticated content.
+# If not set, auto-detection is attempted (looks in ~/.mozilla/firefox/ etc.)
+# Firefox can remain open — cookies are read from a copy of the database.
+# Requires geckodriver: sudo apt install firefox-geckodriver
+# firefox_profile_path = "/home/user/.mozilla/firefox/abc123.default-release"
